@@ -17,6 +17,6 @@ def find_images(query: str) -> [str]:
                 result.append({
                     "full_path": full_path,
                     "filename": filename,
-                    "url": "/image/?filename=" + full_path
+                    "url": config.URL_PREFIX + "/image/?filename=" + full_path
                 })
     return result

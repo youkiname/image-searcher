@@ -60,8 +60,8 @@
         resultsDiv.innerHTML = "";
     };
 
-    async function getSearchResuts() {
-        let apiUrl = "/api/search/";
+    async function getSearchResults() {
+        let apiUrl = "{{ url_prefix }}/api/search/";
         let query = document.getElementById("search_input").value;
         if (!query) {
             return [];
@@ -75,7 +75,7 @@
     function setSearchResults() {
         clearResults();
 
-        getSearchResuts()
+        getSearchResults()
         .then(function(results) {  
             results.forEach(function(image) {
                 resultsDiv.appendChild(getImageCard(image));
